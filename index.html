@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ACT HR Management</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'primary': '#f8fafc', // slate-50
+              'secondary': '#ffffff',
+              'accent': '#f1f5f9', // slate-100
+              'highlight': '#0d9488', // teal-600
+              'text-primary': '#0f172a', // slate-900
+              'text-secondary': '#64748b', // slate-500
+              'dark-primary': '#0f172a', // slate-900
+              'dark-secondary': '#1e293b', // slate-800
+              'dark-accent': '#334155', // slate-700
+            },
+            borderRadius: {
+              'lg': '0.75rem',
+              'xl': '1rem',
+            },
+            boxShadow: {
+              'lg': '0 10px 15px -3px rgb(0 0 0 / 0.07), 0 4px 6px -4px rgb(0 0 0 / 0.07)',
+              'xl': '0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)',
+            },
+            ringOffsetColor: {
+              'primary': '#ffffff',
+              'dark': '#1e293b',
+            }
+          },
+        },
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-is": "https://aistudiocdn.com/react-is@^19.0.0",
+    "recharts": "https://aistudiocdn.com/recharts@^3.4.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.553.0",
+    "xlsx": "https://aistudiocdn.com/xlsx@^0.18.5",
+    "firebase/compat/app": "https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js",
+    "firebase/compat/database": "https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js",
+    "firebase/": "https://aistudiocdn.com/firebase@^12.5.0/",
+    "jspdf": "https://aistudiocdn.com/jspdf@^2.5.1",
+    "jspdf-autotable": "https://aistudiocdn.com/jspdf-autotable@^3.8.2",
+    "firebase/app": "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js",
+    "firebase/database": "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-primary text-text-primary dark:bg-dark-primary dark:text-slate-200">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
