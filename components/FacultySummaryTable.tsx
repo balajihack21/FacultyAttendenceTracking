@@ -15,8 +15,10 @@ const FacultySummaryTable: React.FC<FacultySummaryTableProps> = ({ data, onFacul
   const [currentPage, setCurrentPage] = useState(1);
   const [sortConfig, setSortConfig] = useState<{ key: SortKey; direction: 'asc' | 'desc' } | null>({ key: 'name', direction: 'asc' });
 
-  const sortedData = useMemo(() => {
-    let sortableData = [...data];
+const sortedData = useMemo(() => {
+  const safeData = Array.isArray(data) ? data : [];
+  let sortableData = [...safeData];
+
     if (sortConfig !== null) {
       sortableData.sort((a, b) => {
         if (a[sortConfig.key] < b[sortConfig.key]) {
@@ -51,7 +53,8 @@ const FacultySummaryTable: React.FC<FacultySummaryTableProps> = ({ data, onFacul
     </th>
   );
   
-  if (data.length === 0) {
+if (!Array.isArray(data) || data.length === 0) {
+
       return <div className="text-center py-10 text-text-secondary dark:text-gray-400">No matching records found.</div>
   }
 
